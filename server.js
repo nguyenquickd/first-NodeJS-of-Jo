@@ -4,19 +4,10 @@ var settings = {
   // host: "127.0.0.1",
 };
 
+console.log("Done setting")
+
 var server = new mosca.Server(settings);
 
-// Authentication
-// server.on('authenticate', function (username, password) {
-//   if (username === 'qui' && password.toString('ascii') === 'deptrai') {
-//     // callback("True");
-//     console.log("good Device");
-//   }
-//   else {
-//     // callback("False");
-//     console.log("False device")
-//   }
-// });
 var authenticate = function(client, username, password, callback) {
   var authorized = (username === 'qui' && password.toString() === 'deptrai');
   if (authorized) client.user = username;

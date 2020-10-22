@@ -1,7 +1,7 @@
 var mosca = require('mosca');
 var settings = {
-  "port": 1880
-  // host: "127.0.0.1",
+  port: 1880,
+  host: "18.136.117.167"
 };
 
 console.log("Done setting")
